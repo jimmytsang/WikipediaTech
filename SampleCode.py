@@ -1,4 +1,4 @@
-Sample Code
+# Sample Code
 def function():
-	print('Lol lets hope this works')
+	print('This is just a test.')
 	pass
