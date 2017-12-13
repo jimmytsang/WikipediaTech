@@ -1,0 +1,611 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Wikimedia Tools Labs - ZimmerBot</title>
+        <link rel="stylesheet" href="assets/css/foundation.css" />
+        <script src="assets/js/vendor/modernizr.js"></script>
+    </head>
+    <body>
+
+        <div class="grid-container">
+
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 large-4 cell">
+                    <h2>ZimmerBot
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Wikimedia_Foundation_logo_-_vertical.svg/125px-Wikimedia_Foundation_logo_-_vertical.svg.png"></img>
+                    </h2>
+                </div>
+            </div>
+            <hr>
+            <p>
+                Welcome to the home page of ZimmerBot, a tool created and maintained by DiversaTech at Berkeley since Fall 2017!
+            </p>
+            <p>
+                The goal of this bot is to help readers save data while browsing through Wikipedia by downloading article sets about different search categories such as popularity, article score, and other filters.
+            </p>
+            <p>
+                To learn more about this project, please visit <a href="https://meta.wikimedia.org/wiki/New_Readers/Offline/Content_curation" target="blank"> this link</a>.
+            </p>
+
+            <br>
+
+            <h3>Generate Links</h3>
+            <hr>
+            <div class="grid-x grid-padding-x">
+                <!-- Search -->
+                <div class = "small-12 large-6 cell">
+                    <fieldset class="fieldset">
+                        <legend>Search</legend>
+
+                        <!--Search Method-->
+                        <div class="grid-x grid-padding-x">
+                            <div class="small-4 large-4 cell">
+                                <label class="text-right middle">
+                                    <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2" title="Sort search results based on a certain criterion">
+                                        Method:
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="small-8 large-6 cell">
+                                <select id="method">
+                                    <option value="individual">Individual Articles</option>
+                                    <option value="category">*Coming Soon* Categories</option>
+                                    <option value="related">*Coming Soon* Collections of Related Articles</option>
+                                    <option value="linked">*Coming Soon* Collections of Linked Articles</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Language -->
+                        <div class="grid-x grid-padding-x">
+                            <div class="small-4 large-4 cell">
+                                <label class="text-right middle">
+                                    <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2" title="Search by language">
+                                        Language:
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="small-8 large-6 cell">
+                                <select id="language">
+                                    <option value="ab">Abkhazian</option>
+                                    <option value="ace">Acehnese</option>
+                                    <option value="ady">Adyghe</option>
+                                    <option value="aa">Afar</option>
+                                    <option value="af">Afrikaans</option>
+                                    <option value="ak">Akan</option>
+                                    <option value="sq">Albanian</option>
+                                    <option value="als">Alemannic</option>
+                                    <option value="am">Amharic</option>
+                                    <option value="ang">Anglo-Saxon</option>
+                                    <option value="ar">Arabic</option>
+                                    <option value="an">Aragonese</option>
+                                    <option value="arc">Aramaic</option>
+                                    <option value="hy">Armenian</option>
+                                    <option value="roa-rup">Aromanian</option>
+                                    <option value="as">Assamese</option>
+                                    <option value="ast">Asturian</option>
+                                    <option value="atj">Atikamekw</option>
+                                    <option value="av">Avar</option>
+                                    <option value="ay">Aymara</option>
+                                    <option value="az">Azerbaijani</option>
+                                    <option value="bm">Bambara</option>
+                                    <option value="bjn">Banjar</option>
+                                    <option value="map-bms">Banyumasan</option>
+                                    <option value="ba">Bashkir</option>
+                                    <option value="simple">Basic English</option>
+                                    <option value="eu">Basque</option>
+                                    <option value="bar">Bavarian</option>
+                                    <option value="be">Belarusian</option>
+                                    <option value="be-tarask">Belarusian (Tara�kievica)</option>
+                                    <option value="bn">Bengali</option>
+                                    <option value="bh">Bhojpuri</option>
+                                    <option value="bpy">Bishnupriya Manipuri</option>
+                                    <option value="bi">Bislama</option>
+                                    <option value="bs">Bosnian</option>
+                                    <option value="br">Breton</option>
+                                    <option value="bug">Buginese</option>
+                                    <option value="bg">Bulgarian</option>
+                                    <option value="my">Burmese</option>
+                                    <option value="bxr">Buryat</option>
+                                    <option value="zh-yue">Cantonese</option>
+                                    <option value="ca">Catalan</option>
+                                    <option value="ceb">Cebuano</option>
+                                    <option value="bcl">Central Bicolano</option>
+                                    <option value="ch">Chamorro</option>
+                                    <option value="cbk-zam">Chavacano</option>
+                                    <option value="ce">Chechen</option>
+                                    <option value="chr">Cherokee</option>
+                                    <option value="chy">Cheyenne</option>
+                                    <option value="ny">Chichewa</option>
+                                    <option value="zh">Chinese</option>
+                                    <option value="cho">Choctaw</option>
+                                    <option value="cv">Chuvash</option>
+                                    <option value="zh-classical">Classical Chinese</option>
+                                    <option value="kw">Cornish</option>
+                                    <option value="co">Corsican</option>
+                                    <option value="cr">Cree</option>
+                                    <option value="crh">Crimean Tatar</option>
+                                    <option value="hr">Croatian</option>
+                                    <option value="cs">Czech</option>
+                                    <option value="da">Danish</option>
+                                    <option value="de">Deutsche Sprache</option>
+                                    <option value="din">Dinka</option>
+                                    <option value="dv">Divehi</option>
+                                    <option value="dty">Doteli</option>
+                                    <option value="nl">Dutch</option>
+                                    <option value="nds-nl">Dutch Low Saxon</option>
+                                    <option value="dz">Dzongkha</option>
+                                    <option value="pa">Eastern Punjabi</option>
+                                    <option value="arz">Egyptian Arabic</option>
+                                    <option value="eml">Emilian-Romagnol</option>
+                                    <option value="en">English</option>
+                                    <option value="myv">Erzya</option>
+                                    <option value="eo">Esperanto</option>
+                                    <option value="et">Estonian</option>
+                                    <option value="ee">Ewe</option>
+                                    <option value="ext">Extremaduran</option>
+                                    <option value="fo">Faroese</option>
+                                    <option value="hif">Fiji Hindi</option>
+                                    <option value="fj">Fijian</option>
+                                    <option value="fi">Finnish</option>
+                                    <option value="frp">Franco-Proven�al</option>
+                                    <option value="fr">French</option>
+                                    <option value="fur">Friulian</option>
+                                    <option value="ff">Fula</option>
+                                    <option value="gag">Gagauz</option>
+                                    <option value="gl">Galician</option>
+                                    <option value="gan">Gan</option>
+                                    <option value="ka">Georgian</option>
+                                    <option value="de">German</option>
+                                    <option value="glk">Gilaki</option>
+                                    <option value="got">Gothic</option>
+                                    <option value="el">Greek</option>
+                                    <option value="kl">Greenlandic</option>
+                                    <option value="gn">Guarani</option>
+                                    <option value="gu">Gujarati</option>
+                                    <option value="ht">Haitian</option>
+                                    <option value="ht">Haitian Creole language</option>
+                                    <option value="hak">Hakka</option>
+                                    <option value="ha">Hausa</option>
+                                    <option value="haw">Hawaiian</option>
+                                    <option value="he">Hebrew</option>
+                                    <option value="hz">Herero</option>
+                                    <option value="mrj">Hill Mari</option>
+                                    <option value="hi">Hindi</option>
+                                    <option value="ho">Hiri Motu</option>
+                                    <option value="hu">Hungarian</option>
+                                    <option value="is">Icelandic</option>
+                                    <option value="es">Idioma espa�ol</option>
+                                    <option value="io">Ido</option>
+                                    <option value="ig">Igbo</option>
+                                    <option value="ilo">Ilocano</option>
+                                    <option value="id">Indonesian</option>
+                                    <option value="ia">Interlingua</option>
+                                    <option value="ie">Interlingue</option>
+                                    <option value="iu">Inuktitut</option>
+                                    <option value="ik">Inupiak</option>
+                                    <option value="ga">Irish</option>
+                                    <option value="it">Italian</option>
+                                    <option value="jam">Jamaican Patois</option>
+                                    <option value="ja">Japanese</option>
+                                    <option value="jv">Javanese</option>
+                                    <option value="kbd">Kabardian</option>
+                                    <option value="kbp">Kabiye</option>
+                                    <option value="kab">Kabyle</option>
+                                    <option value="xal">Kalmyk</option>
+                                    <option value="kn">Kannada</option>
+                                    <option value="kr">Kanuri</option>
+                                    <option value="pam">Kapampangan</option>
+                                    <option value="krc">Karachay-Balkar</option>
+                                    <option value="kaa">Karakalpak</option>
+                                    <option value="ks">Kashmiri</option>
+                                    <option value="csb">Kashubian</option>
+                                    <option value="kk">Kazakh</option>
+                                    <option value="km">Khmer</option>
+                                    <option value="ki">Kikuyu</option>
+                                    <option value="rw">Kinyarwanda</option>
+                                    <option value="ky">Kirghiz</option>
+                                    <option value="rn">Kirundi</option>
+                                    <option value="kv">Komi</option>
+                                    <option value="koi">Komi-Permyak</option>
+                                    <option value="kg">Kongo</option>
+                                    <option value="gom">Konkani</option>
+                                    <option value="ko">Korean</option>
+                                    <option value="kj">Kuanyama</option>
+                                    <option value="ku">Kurdish (Kurmanji)</option>
+                                    <option value="ckb">Kurdish (Sorani)</option>
+                                    <option value="lad">Ladino</option>
+                                    <option value="lbe">Lak</option>
+                                    <option value="lo">Lao</option>
+                                    <option value="ltg">Latgalian</option>
+                                    <option value="la">Latin</option>
+                                    <option value="lv">Latvian</option>
+                                    <option value="lez">Lezgian</option>
+                                    <option value="lij">Ligurian</option>
+                                    <option value="li">Limburgish</option>
+                                    <option value="ln">Lingala</option>
+                                    <option value="it">Lingua italiana</option>
+                                    <option value="lt">Lithuanian</option>
+                                    <option value="olo">Livvi-Karelian</option>
+                                    <option value="jbo">Lojban</option>
+                                    <option value="lmo">Lombard</option>
+                                    <option value="nds">Low Saxon</option>
+                                    <option value="dsb">Lower Sorbian</option>
+                                    <option value="lg">Luganda</option>
+                                    <option value="lb">Luxembourgish</option>
+                                    <option value="pt">L�ngua portuguesa</option>
+                                    <option value="mk">Macedonian</option>
+                                    <option value="mai">Maithili</option>
+                                    <option value="mg">Malagasy</option>
+                                    <option value="ms">Malay</option>
+                                    <option value="ml">Malayalam</option>
+                                    <option value="mt">Maltese</option>
+                                    <option value="gv">Manx</option>
+                                    <option value="mi">Maori</option>
+                                    <option value="mr">Marathi</option>
+                                    <option value="mh">Marshallese</option>
+                                    <option value="mzn">Mazandarani</option>
+                                    <option value="mhr">Meadow Mari</option>
+                                    <option value="cdo">Min Dong</option>
+                                    <option value="zh-min-nan">Min Nan</option>
+                                    <option value="min">Minangkabau</option>
+                                    <option value="xmf">Mingrelian</option>
+                                    <option value="mwl">Mirandese</option>
+                                    <option value="mdf">Moksha</option>
+                                    <option value="mo">Moldovan</option>
+                                    <option value="mn">Mongolian</option>
+                                    <option value="mus">Muscogee</option>
+                                    <option value="nah">Nahuatl</option>
+                                    <option value="na">Nauruan</option>
+                                    <option value="nv">Navajo</option>
+                                    <option value="ng">Ndonga</option>
+                                    <option value="nap">Neapolitan</option>
+                                    <option value="ne">Nepali</option>
+                                    <option value="new">Newar</option>
+                                    <option value="pih">Norfolk</option>
+                                    <option value="nrm">Norman</option>
+                                    <option value="frr">North Frisian</option>
+                                    <option value="lrc">Northern Luri</option>
+                                    <option value="se">Northern Sami</option>
+                                    <option value="nso">Northern Sotho</option>
+                                    <option value="no">Norwegian (Bokm�l)</option>
+                                    <option value="nn">Norwegian (Nynorsk)</option>
+                                    <option value="nov">Novial</option>
+                                    <option value="ii">Nuosu</option>
+                                    <option value="oc">Occitan</option>
+                                    <option value="or">Odia</option>
+                                    <option value="cu">Old Church Slavonic</option>
+                                    <option value="om">Oromo</option>
+                                    <option value="os">Ossetian</option>
+                                    <option value="ilo">Pagsasao nga Ilokano</option>
+                                    <option value="pfl">Palatinate German</option>
+                                    <option value="pi">Pali</option>
+                                    <option value="pag">Pangasinan</option>
+                                    <option value="pap">Papiamentu</option>
+                                    <option value="ps">Pashto</option>
+                                    <option value="pdc">Pennsylvania German</option>
+                                    <option value="fa">Persian</option>
+                                    <option value="pcd">Picard</option>
+                                    <option value="pms">Piedmontese</option>
+                                    <option value="pl">Polish</option>
+                                    <option value="pnt">Pontic</option>
+                                    <option value="pt">Portuguese</option>
+                                    <option value="qu">Quechua</option>
+                                    <option value="ksh">Ripuarian</option>
+                                    <option value="rmy">Romani</option>
+                                    <option value="ro">Romanian</option>
+                                    <option value="rm">Romansh</option>
+                                    <option value="ru">Russian</option>
+                                    <option value="rue">Rusyn</option>
+                                    <option value="sah">Sakha</option>
+                                    <option value="sm">Samoan</option>
+                                    <option value="bat-smg">Samogitian</option>
+                                    <option value="sg">Sango</option>
+                                    <option value="sa">Sanskrit</option>
+                                    <option value="sc">Sardinian</option>
+                                    <option value="stq">Saterland Frisian</option>
+                                    <option value="sco">Scots</option>
+                                    <option value="gd">Scottish Gaelic</option>
+                                    <option value="sr">Serbian</option>
+                                    <option value="sh">Serbo-Croatian</option>
+                                    <option value="st">Sesotho</option>
+                                    <option value="sn">Shona</option>
+                                    <option value="scn">Sicilian</option>
+                                    <option value="szl">Silesian</option>
+                                    <option value="simple">Simple English</option>
+                                    <option value="sd">Sindhi</option>
+                                    <option value="si">Sinhalese</option>
+                                    <option value="ceb">Sinugboanon</option>
+                                    <option value="sk">Slovak</option>
+                                    <option value="sl">Slovenian</option>
+                                    <option value="so">Somali</option>
+                                    <option value="azb">Southern Azerbaijani</option>
+                                    <option value="es">Spanish</option>
+                                    <option value="srn">Sranan</option>
+                                    <option value="bo">Standard Tibetan</option>
+                                    <option value="su">Sundanese</option>
+                                    <option value="sw">Swahili</option>
+                                    <option value="ss">Swati</option>
+                                    <option value="sv">Swedish</option>
+                                    <option value="tl">Tagalog</option>
+                                    <option value="ty">Tahitian</option>
+                                    <option value="tg">Tajik</option>
+                                    <option value="ta">Tamil</option>
+                                    <option value="roa-tara">Tarantino</option>
+                                    <option value="tt">Tatar</option>
+                                    <option value="te">Telugu</option>
+                                    <option value="tet">Tetum</option>
+                                    <option value="th">Thai</option>
+                                    <option value="bo">Tibetan</option>
+                                    <option value="ti">Tigrinya</option>
+                                    <option value="tpi">Tok Pisin</option>
+                                    <option value="to">Tongan</option>
+                                    <option value="ts">Tsonga</option>
+                                    <option value="tn">Tswana</option>
+                                    <option value="tcy">Tulu</option>
+                                    <option value="tum">Tumbuka</option>
+                                    <option value="tr">Turkish</option>
+                                    <option value="tk">Turkmen</option>
+                                    <option value="tyv">Tuvan</option>
+                                    <option value="tw">Twi</option>
+                                    <option value="udm">Udmurt</option>
+                                    <option value="uk">Ukrainian</option>
+                                    <option value="hsb">Upper Sorbian</option>
+                                    <option value="ur">Urdu</option>
+                                    <option value="ug">Uyghur</option>
+                                    <option value="uz">Uzbek</option>
+                                    <option value="ve">Venda</option>
+                                    <option value="vec">Venetian</option>
+                                    <option value="vep">Vepsian</option>
+                                    <option value="vi">Vietnamese</option>
+                                    <option value="vo">Volap�k</option>
+                                    <option value="fiu-vro">V�ro</option>
+                                    <option value="wa">Walloon</option>
+                                    <option value="war">Waray</option>
+                                    <option value="cy">Welsh</option>
+                                    <option value="vls">West Flemish</option>
+                                    <option value="fy">West Frisian</option>
+                                    <option value="pnb">Western Punjabi</option>
+                                    <option value="tl">Wikang Tagalog</option>
+                                    <option value="wo">Wolof</option>
+                                    <option value="wuu">Wu</option>
+                                    <option value="xh">Xhosa</option>
+                                    <option value="yi">Yiddish</option>
+                                    <option value="yo">Yoruba</option>
+                                    <option value="diq">Zazaki</option>
+                                    <option value="zea">Zeelandic</option>
+                                    <option value="za">Zhuang</option>
+                                    <option value="zu">Zulu</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Search Query (Keywords) -->
+                        <div class="grid-x grid-padding-x">
+                            <div class="small-4 large-4 cell">
+                                <label class="text-right middle">
+                                    <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2" title="Place an input of your desired search terms">
+                                        Query:<span style="color:red">*</span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="small-8 large-6 cell">
+                                <input type="text" id="query" placeholder="Keywords"/>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <!-- Filter & Limit -->
+                <div class = "small-12 large-6 cell">
+                    <fieldset class="fieldset" style="height: 245;">
+                        <legend>Filter & Limit</legend>
+
+                        <!-- Filter Method -->
+                        <div class="grid-x grid-padding-x">
+                            <div class="small-4 large-4 cell">
+                                <label class="text-right middle">
+                                        <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2"
+                                         title="Article Score - filters by Article Score.
+                                        Popularity - filters by popularity score.
+                                        Quality - filters by ORES assessment
+                                        Most Linked To - filters by most relevant urls
+                                        Exclude Stubs - filters out stub articles">
+                                            Filter By:
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="small-8 large-6 cell">
+                                <select id="filter">
+                                    <!-- <option value="score">Article Score</option> -->
+                                    <option value="popularity">Popularity</option>
+                                    <option value="ores_quality">Quality</option>
+                                    <option value="most_linked_to">Linked To</option>
+                                    <option value="most_linked_to">Article Score</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Limit Method -->
+                        <div class="grid-x grid-padding-x">
+                            <div class="small-4 large-4 cell">
+                                <label class="text-right middle">
+                                        <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2" title="Filter by megabytes or number of articles">
+                                            Limit By:
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="small-8 large-6 cell">
+                                <select id="limit_method">
+                                    <option value="number">Number of Articles</option>
+                                    <option value="size">Size (in MB)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Limit -->
+                        <div class="grid-x grid-padding-x">
+                            <div class="small-4 large-4 cell">
+                                <label class="text-right middle">
+                                        <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2" title="Specify number of megabytes or articles to limit by">
+                                            Limit:<span style="color:red">*</span>
+                                        </span>
+                                </label>
+                            </div>
+                            <div class="small-8 large-6 cell">
+                                <input type="number" id="limit" placeholder="MB or #"/>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </div>
+
+            <!-- Additional Options -->
+            <fieldset class="fieldset">
+                <legend>Additional Options</legend>
+
+                <div class="grid-x grid-padding-x">
+                    <!-- Media Options -->
+                    <div class="small-4 large-2 cell">
+                        <label class="text-right middle">
+                                <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2" title="Include text, images, and/or all media types">
+                                    Media:
+                                </span>
+                        </label>
+                    </div>
+                    <div class="small-8 large-3 cell">
+                        <select id="media">
+                            <option value="text_only">Text Only</option>
+                            <option value="text_and_images">Text and Images Only</option>
+                            <option value="all">Text and All Media</option>
+                        </select>
+                    </div>
+
+                    <!-- Stubs -->
+                    <div class="small-4 large-3 cell">
+                        <label class="text-right middle">
+                            <span data-tooltip aria-haspopup="true" class="has-tip top" data-click-open="true" data-disable-hover="false" tabindex="2" title="Include or exclude stubs/starts (short/incomplete articles)">
+                                Stubs:
+                            </span>
+                        </label>
+                    </div>
+                    <div class="small-8 large-3 cell">
+                        <select id="stub">
+                            <option value="include">Include</option>
+                            <option value="exclude">Exclude</option>
+                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <!-- Submit Button -->
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 large-2 large-offset-5 cell">
+                    <button type="button" id="submit" class="button expanded">Submit</button>
+                </div>
+            </div>
+
+            <!-- Message -->
+            <p id="message" align="center"></p>
+
+            <!-- Search Results -->
+            <fieldset class="fieldset">
+                <legend>Search Results</legend>
+                <textarea id="results" placeholder="No links yet" rows="3"></textarea>
+            </fieldset>
+
+            <!-- Result Handling Buttons -->
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 large-6 large-offset-3 cell">
+                    <div class="stacked-for-small button-group">
+                        <button id="download" type="button" class="success button">Download Link Collection</button>
+                        <button id="clear" type="button" class="alert button">Clear Results</button>
+                    </div>
+                </div>
+            </div>
+
+            <p>&nbsp;</p>
+
+            <div class="small-12 large-3 cell">
+                <h4>Contributors from </h4>
+            </div>
+            <div class="grid-x grid-padding-x">
+                <div class="small-12 large-3 cell">
+                    <img src="assets/dt-logo.jpeg"></img>
+                </div>
+            </div>
+            <hr>
+            <div class="small-12 cell">
+                <div class="grid-x grid-padding-x small-up-1 large-up-4">
+                    <div class="cell"><li> Jihoon An </li></div>
+                    <div class="cell"><li> Sean Lee </li></div>
+                    <div class="cell"><li> Leon Ming </li></div>
+                    <div class="cell"><li> Jimmy Tsang </li></div>
+                    <div class="cell"><li> Neil Palleti </li></div>
+                    <div class="cell"><li> Celena Chang </li></div>
+                    <div class="cell"><li> Jade Yen </li></div>
+                    <div class="cell"><li> Cynthia Ha </li></div>
+                    <div class="cell"><li> Tiffany Pham </li></div>
+                    <div class="cell"><li> Hannah Kim </li></div>
+                    <div class="cell"><li> Vishnu Kumar </li></div>
+                </div>
+            </div>
+            <hr>
+            <br>
+        </div>
+
+        <script src="assets/js/vendor/jquery.js"></script>
+        <script src="assets/js/foundation.min.js"></script>
+        <script>
+            $(document).foundation();
+        </script>
+        <script>
+            $("#submit").click(function() {
+                $("#message").html("Please wait, this may take a while...");
+                var xhr = new XMLHttpRequest();
+                var url = "https://zimmerbot.host";
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader("Content-type", "application/json");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        var json = JSON.parse(xhr.responseText);
+                        console.log(json);
+                        $("#results").val(json.join("\n"));
+                        $("#message").html("");
+                    } else if (xhr.readyState === 4 && xhr.status === 202) {
+                        var json = JSON.parse(xhr.responseText);
+                        $("#message").html(json[0]);
+                    } else {
+                        console.log(xhr.status);
+                        $("#message").html("Something went wrong, please try something else");
+                    }
+                };
+                var request = JSON.stringify(
+                    {
+                        "query" : encodeURI($("#query").val()),
+                        "language" : $("#language").val(),
+                        "filter" : $("#filter").val(),
+                        "limit" : $("#limit").val(),
+                        "stub" : $("#stub").val()
+                    }
+                );
+                console.log(request);
+                console.log(xhr.readyState);
+                xhr.send(request);
+            });
+
+            $("#download").click(function(){
+                $("#results").select();
+                document.execCommand('copy');
+            });
+
+            $("#clear").click(function(){
+                $("#results").val("");
+            });
+        </script>
+    </body>
+</html>
