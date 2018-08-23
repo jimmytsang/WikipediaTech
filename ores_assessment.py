@@ -14,7 +14,7 @@ from language_dict import language_dict
 # ORES Documentation: https://ores.wikimedia.org/v3/
 
 # Base ORES API URL
-url = "http://ores.wmflabs.org/v3/scores/"
+url = "http://ores.wikimedia.org/v3/scores/"
 # url_example = "https://ores.wmflabs.org/v3/scores/enwiki/?models=wp10&revids=34854345"
 
 # Note: We only use wp10 because this is what will give us the current article quality.
